@@ -156,7 +156,7 @@ Our Image is created
 
 First create Azure Container Registry.
 
-Open Powershell, login to Azure using command `az login`.
+Open Powershell, login to Azure using command `az login --tenant <TENANT-GUID>`.
 
 > We have created powershell scripts to deploy resources on Azure. Before running powershell script first we have to provide parameters value in [variables.txt](scripts/powershell-scripts/variables.txt) file.
 
