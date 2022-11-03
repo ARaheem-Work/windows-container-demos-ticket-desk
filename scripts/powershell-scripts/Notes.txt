@@ -1,0 +1,6 @@
+Storage account name: "stakspoc005"
+Storage account key: XAjSwFKqWdVp6yNJAjhGoPcmV+hCV4ZEY9YSaKJM+fRsBqfX8LCs3Q+tKgTuvmYPCUjFIInXn1f7+AStAZ6oLg==
+
+-----------------
+
+

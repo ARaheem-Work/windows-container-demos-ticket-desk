@@ -1,0 +1,33 @@
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT license.
+subscriptionName="928d0c6c-4ff9-4a75-a6a3-7fac552f67aa" # subscription Id
+resourceGroupName="rg-akspoc-dev-westus3-005"
+resourceGroupLocation="westus3" # You can adjust your Azure region for deployment (e.g. some services may be available in westus2 or westus3)
+# CONTAINER REGISTERY DETAILS
+acrRegistryName="acrakspoc005" # Set to your ACR name e.g. mywincondemoacr. max length=50 characters,only alphanumeric
+# STORAGE ACCOUNT FILE SHARE DETAILS
+aksStorageAccountname="stakspoc005" # Set to your Azure Storage Account name e.g. mywincondemosa. max length=24, lowercase letters,numbers.
+aksFileSharename="wincondemos-fileshare" # Set to your Azure Storage file share e.g. wincondemos-fileshare
+aksStorageAccountSKU="Standard_LRS" # Select your Azure Storage Account SKU, e.g. Standard_LRS
+# AZURE KEY VAULT DETAILS
+akvName="akvakspoc005" # Set to your azure key vault name e.g. wincondemos-akv
+# AZURE CLUSTER DETAILS
+clusterName="aks-akspoc-dev-005" # Set to your AKS cluster name e.g. wincondemos-aks
+# CREATING AKS CLUSTER
+workerNodeCount=2 # Set number of workers
+kubernetesVersion="1.24.3" # Set the kubernetes version for your AKS cluster.  You need to select a version that is supported by your Azure Region, which you can check with az aks get-versions --location westus2
+networkPlugin="azure" # Set your network plugin, for demo purposes, the default of azure is sufficient
+loadBalancerSKU="Standard" # Select your Azure Load Balancer SKU, e.g. Standard
+nodeVMSize="Standard_DS2_v2" # Select your node VM size, you can use something like Standard_DS2_v2
+winNodePoolName="winnp" # Set your Windows Node Poolname, this needs to be alphanumeric and at most 6 characters, e.g. wcdnp (windows containers demos node pool)
+winNodeVMSize="Standard_DS2_v2" # Set your SKU size for your node pool VMs, e.g. Standard_DS2_v2
+winWorkerNodeCount="2" # Set the worker count, e.g. 2
+enableAutoScaler=True # For the purposes of this demo, you can keep this value
+workerNodeMaxCount=2 # Set the maximum number of workers in the default (linux) nodepool
+winWorkerNodeMaxCount=2 # Set the maximum number of workers in the default (windows) nodepool
+enableMonitoring=True
+# CREATING SQL SERVER
+sqlServerName="sqlsakspoc005" # Set the name for your sqlserver e.g. wincondemos-sqlserver
+sqlDatabaseName="wincondemos-sqldb" # Set your Azure SQL Server Database name e.g. wincondemos-sqldb
+sqlServerAdminUser="sqladmin" # Set the name for your administrator user e.g. myadmin
+sqlServerAdminUserPassword="k0Xf95Z^g79q6^" # Set your administrator password for your Azure SQLServer
