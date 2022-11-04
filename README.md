@@ -165,6 +165,15 @@ The first service we are going to create is Azure Container Registry (ACR). It i
 ```powershell
 D:\windows-containers-demos\ticket-desk\scripts\powershell-scripts\create-acr.ps1
 ```
+## Create container image and push to ACR using Azure CLI
+
+Open Powershell, login to Azure using Azure CLI
+
+```powershell
+cd D:\windows-containers-demos\ticket-desk\application
+az acr build -t ticketdesk:latest -f ticketDesk.Dockerfile --platform windows -r <ACR-NAME> .
+```
+
 
 ## Publish/Push your custom Docker image into Azure Container Registry
 
