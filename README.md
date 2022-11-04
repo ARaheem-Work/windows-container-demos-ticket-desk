@@ -143,7 +143,7 @@ if ($modified) {
 
 Passing web.config file location to this second script Set-WebConfigSettings that reads environment variables and over-rides configuration in Web.config by modifying the file.
 
-## Building Docker Image
+## (Optional) Building Docker Image
 
 ```powershell
 cd D:\windows-containers-demos\ticket-desk\application
@@ -175,7 +175,7 @@ az acr build -t ticketdesk:latest -f ticketDesk.Dockerfile --platform windows -r
 ```
 
 
-## Publish/Push your custom Docker image into Azure Container Registry
+##(Optional) Publish/Push your custom Docker image into Azure Container Registry
 
 Open PowerShell , Login to Azure Container Registry
 
@@ -206,7 +206,7 @@ D:\windows-containers-demos\ticket-desk\scripts\powershell-scripts\create-aks.ps
 We need to connect to AKS in order to run kubectl commands against the new cluster, as an admin.
 
 ```powershell
-az aks get-credentials --resource-group=$aksResourceGroupName --name=$clusterName --admin 
+az aks get-credentials --resource-group=$resourceGroupName --name=$clusterName --admin 
 ```
 
 Here, You can access nodes, pods etc.
