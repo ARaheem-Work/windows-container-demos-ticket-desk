@@ -175,7 +175,7 @@ az acr build -t ticketdesk:latest -f ticketDesk.Dockerfile --platform windows -r
 ```
 
 
-##(Optional) Publish/Push your custom Docker image into Azure Container Registry
+## (Optional) Publish/Push your custom Docker image into Azure Container Registry
 
 Open PowerShell , Login to Azure Container Registry
 
